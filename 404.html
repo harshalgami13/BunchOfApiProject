@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <!-- See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/ -->
+    <script>
+        sessionStorage.redirect = location.href;
+    </script>
+    <meta http-equiv="refresh" content="0;URL='https://harshalgami13.github.io/BunchOfApiProject/'">
+    </meta>
+</head>
+<script>
+    (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+            history.replaceState(null, null, redirect);
+        }
+    })();
+</script>
+
+<body>
+</body>
+
+</html>
